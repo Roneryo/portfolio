@@ -1,0 +1,21 @@
+{
+  "name": "Portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "server": "nodemon app.js ",
+    "sass": "sass ./sass/main.scss ./precompilado/precompilado.css --watch",
+    "postcss": "postcss ./precompilado/precompilado.css -o ./public/css/main.css --use autoprefixer -w"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "postcss-cli": "^7.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "nodemon": "^2.0.2",
+    "pug": "^2.0.4"
+  }
+}
