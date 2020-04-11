@@ -2,6 +2,8 @@
 .Anna{
     display: flex;
     justify-self: center;
+    grid-column-start: 2;
+    grid-row-start:2;
     img{
         image-rendering: pixelated;
     }
@@ -15,8 +17,5 @@
         position: fixed;    
         margin-top: 60px;
         margin-left: 35px;
-    }
-    .body{
-
     }
 }

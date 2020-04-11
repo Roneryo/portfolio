@@ -3,9 +3,13 @@
   padding: 0;
 }
 
+body {
+  background: #1b262c;
+}
+
 .grid {
   display: grid;
-  grid-template-rows: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -23,6 +27,8 @@
 .Anna {
   display: flex;
   justify-self: center;
+  grid-column-start: 2;
+  grid-row-start: 2;
 }
 .Anna img {
   image-rendering: pixelated;
@@ -36,6 +42,41 @@
   position: fixed;
   margin-top: 60px;
   margin-left: 35px;
+}
+
+.background {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  image-rendering: pixelated;
+  background-image: url(https://data.whicdn.com/images/106548116/original.gif);
+  overflow: hidden;
+}
+
+.Anna {
+  display: flex;
+  justify-self: center;
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+.Anna img {
+  image-rendering: pixelated;
+}
+.Anna .mouth {
+  position: fixed;
+  margin-top: 92px;
+  margin-left: 53px;
+}
+.Anna .eye {
+  position: fixed;
+  margin-top: 60px;
+  margin-left: 35px;
+}
+
+@media screen and (max-height: 350px) {
+  .grid {
+    grid-template-rows: 0.2fr 1fr;
+  }
 }
 
 /*# sourceMappingURL=precompilado.css.map */
