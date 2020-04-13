@@ -37,14 +37,19 @@ body {
   position: fixed;
   margin-top: 92px;
   margin-left: 53px;
+  display: none;
 }
 .Anna .eye {
   position: fixed;
   margin-top: 60px;
   margin-left: 35px;
+  display: none;
 }
 
 .background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   height: 100vh;
   width: 100vw;
@@ -53,34 +58,15 @@ body {
   overflow: hidden;
 }
 
-.Anna {
-  display: flex;
-  justify-self: center;
-  grid-column-start: 2;
-  grid-row-start: 2;
-}
-.Anna img {
-  image-rendering: pixelated;
-}
-.Anna .mouth {
-  position: fixed;
-  margin-top: 92px;
-  margin-left: 53px;
-}
-.Anna .eye {
-  position: fixed;
-  margin-top: 60px;
-  margin-left: 35px;
-}
-
 .message {
   grid-column-start: 2;
   place-self: flex-end;
   z-index: 2;
   color: white;
   text-align: center;
+  margin: 0 auto;
 }
-.message h1 {
+.message h1, .message h3 {
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid orange;
@@ -93,6 +79,13 @@ body {
   /* Adjust as needed */
   font-size: 1.2em;
   animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  animation-play-state: paused;
+}
+.message h3 {
+  position: relative;
+  bottom: 150px;
+  border-right: initial;
+  /* The typwriter cursor */
 }
 
 @keyframes typing {

@@ -1,8 +1,38 @@
 .background{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     position: absolute;
     height: 100vh;
     width: 100vw;
     image-rendering: pixelated;
     background-image: url(https://data.whicdn.com/images/106548116/original.gif);
     overflow: hidden;
+}
+.message{
+    grid-column-start: 2;
+    place-self: flex-end;
+    z-index: 2;
+    color:white;
+    text-align: center;
+    margin:0 auto;
+    h1,h3{
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid orange; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        font-size: 1.2em;
+        animation: 
+          typing 3.5s steps(40, end),
+          blink-caret .75s step-end infinite;
+        animation-play-state:paused;
+        }
+    h3{
+        position: relative;
+        bottom: 150px;
+        border-right: initial; /* The typwriter cursor */
+
+    }
 }

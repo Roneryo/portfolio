@@ -7,27 +7,8 @@
 @import 'components/buttons';
 @import 'components/sprites/Anna/anna';
 @import 'pages/404';
-@import 'components/sprites/Anna/anna';
 //@import 'components/sprites/Stella/stella';
 
-.message{
-    grid-column-start: 2;
-    place-self: flex-end;
-    z-index: 2;
-    color:white;
-    text-align: center;
-    h1{
-        overflow: hidden; /* Ensures the content is not revealed until the animation */
-        border-right: .15em solid orange; /* The typwriter cursor */
-        white-space: nowrap; /* Keeps the content on a single line */
-        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-        letter-spacing: .15em; /* Adjust as needed */
-        font-size: 1.2em;
-        animation: 
-          typing 3.5s steps(40, end),
-          blink-caret .75s step-end infinite;
-    }
-}
 
 @keyframes typing{
     from{width: 0}
