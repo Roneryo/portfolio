@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+ul {
+  list-style: none;
+  padding: 0 20px;
+}
+
 body {
   background: #1b262c;
 }
@@ -22,6 +27,26 @@ body {
 
 .buttons {
   background-color: #333;
+}
+
+.container {
+  margin: 10px;
+  display: flex;
+  height: 95vh;
+}
+
+.card {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.794);
+  font-family: system-ui;
+  background: #1b262c;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: -1px 3px 24px 0px rgba(0, 0, 0, 0.75);
 }
 
 .Anna {
@@ -66,26 +91,50 @@ body {
   text-align: center;
   margin: 0 auto;
 }
-.message h1, .message h3 {
+.message h1 {
   overflow: hidden;
-  /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid orange;
-  /* The typwriter cursor */
   white-space: nowrap;
-  /* Keeps the content on a single line */
   margin: 0 auto;
-  /* Gives that scrolling effect as the typing happens */
   letter-spacing: 0.15em;
-  /* Adjust as needed */
   font-size: 1.2em;
   animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
   animation-play-state: paused;
 }
 .message h3 {
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  font-size: 1.2em;
+  animation: typing 1s steps(40, end), blink-caret 0.75s step-end infinite;
+  animation-play-state: paused;
   position: relative;
   bottom: 150px;
   border-right: initial;
   /* The typwriter cursor */
+}
+
+.button {
+  padding: 10px 0;
+  border-radius: 10px;
+  font-family: system-ui;
+  cursor: pointer;
+  color: white;
+  border: 1px solid #3282b8;
+  background-color: #3282b8;
+  text-align: center;
+  width: 100%;
+  animation: onHoverOut 0.5s forwards;
+}
+.button:hover {
+  animation: onHoverOn 0.5s forwards;
+}
+.button span {
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 
 @keyframes typing {
@@ -102,6 +151,22 @@ body {
   }
   50% {
     border-color: orange;
+  }
+}
+@keyframes onHoverOn {
+  from {
+    background-color: #3282b8;
+  }
+  to {
+    background-color: transparent;
+  }
+}
+@keyframes onHoverOut {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: #3282b8;
   }
 }
 @media screen and (max-height: 350px) {
@@ -121,6 +186,13 @@ body {
   .Anna {
     grid-column-start: 2;
     grid-row-start: 2;
+  }
+}
+@media screen and (min-width: 570px) {
+  .container {
+    height: 85vh;
+    width: 85vh;
+    margin: 20px auto;
   }
 }
 

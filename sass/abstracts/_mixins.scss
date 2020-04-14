@@ -1,0 +1,44 @@
+
+//Mixin para mensaje 404
+@mixin messageText{
+  grid-column-start: 2;
+  place-self: flex-end;
+  z-index: 2;
+  color:white;
+  text-align: center;
+  margin:0 auto;
+}
+
+@mixin textAnimationPropieties($typeTime){
+    overflow: hidden;                   //Ensures the content is not revealed until the animation 
+    border-right: .15em solid orange; //The typwriter cursor 
+    white-space: nowrap;                //Keeps the content on a single line 
+    margin: 0 auto;                     //Gives that scrolling effect as the typing happens 
+    letter-spacing: .15em;              //Adjust as needed 
+    font-size: 1.2em;
+    animation: 
+      typing $typeTime steps(40, end),
+      blink-caret .75s step-end infinite;
+    animation-play-state:paused;
+}
+//Mixin para mensaje 404 end
+
+//Mixin para botones
+@mixin primaryButton{
+  padding:10px 0;
+  border-radius: 10px;
+  font-family:system-ui;
+  cursor: pointer;
+  color:white;
+  border: 1px solid $secondary;
+  background-color: $secondary;
+  text-align: center;
+  width: 100%;
+  animation: onHoverOut .5s forwards;
+  &:hover{
+  animation: onHoverOn .5s forwards;
+  }
+}
+//Mixin para botones end
+
+//Mixion para cartas

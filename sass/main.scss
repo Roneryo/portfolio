@@ -1,3 +1,4 @@
+@import 'abstracts/mixins';
 @import 'base/baseColors';
 @import 'base/reset';
 @import 'base/typography';
@@ -5,34 +6,17 @@
 @import 'layout/grids';
 @import 'components/flex';
 @import 'components/buttons';
+@import 'components/cards';
 @import 'components/sprites/Anna/anna';
-@import 'pages/404';
 //@import 'components/sprites/Stella/stella';
-
-
-@keyframes typing{
-    from{width: 0}
-    to{width: 100%}
-}
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange }
-}
-@media screen and (max-height:350px){
-    .grid{
-        grid-template-rows: 0.2fr 1fr;
+@import 'pages/404';
+.button{
+    @include primaryButton;
+    span{
+        display: block;
+        height: 100%;
+        width: 100%;
     }
 }
-@media screen and (max-width:500px){
-    .message{
-        letter-spacing: .7em; /* Adjust as needed */
-        font-size:.7em;
-        white-space:initial; /* Keeps the content on a single line */
-        // grid-template-rows:  0.1fr;
-        // grid-template-columns:  0.1fr;
-    }
-    .Anna{
-        grid-column-start: 2;
-        grid-row-start:2;
-    }
-}
+@import 'pages/keyframes';
+@import 'pages/mediaquery';

@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "server": "nodemon app.js ",
+    "server": "nodemon app.js -e pug,js,css",
     "sass": "sass ./sass/main.scss ./precompilado/precompilado.css --watch",
     "postcss": "postcss ./precompilado/precompilado.css -o ./public/css/main.css --use autoprefixer -w"
   },
@@ -16,6 +16,7 @@
   "devDependencies": {
     "autoprefixer": "^9.7.6",
     "nodemon": "^2.0.2",
-    "pug": "^2.0.4"
+    "pug": "^2.0.4",
+    "reload": "^3.0.4"
   }
 }

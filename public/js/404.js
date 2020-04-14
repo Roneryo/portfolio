@@ -1,4 +1,3 @@
-
 var audio  = document.querySelector(".audio");
 audio.loop = true;
 audio.playbackRate = 1;
@@ -27,4 +26,9 @@ h1.addEventListener('animationend',()=>{
     ojos.style.display= 'none';
     h3.style.animationPlayState = "running";
     cuerpo.removeEventListener("click",sonar);
+})
+h3.addEventListener('animationend',()=>{
+    setTimeout(()=>{
+        location.href='/';
+    },1500)
 })

@@ -1,0 +1,29 @@
+//404 mediaquery Grid.
+@media screen and (max-height:350px){
+    .grid{
+        grid-template-rows: 0.2fr 1fr;
+    }
+}
+@media screen and (max-width:500px){
+    .message{
+        letter-spacing: .7em; /* Adjust as needed */
+        font-size:.7em;
+        white-space:initial; /* Keeps the content on a single line */
+        // grid-template-rows:  0.1fr;
+        // grid-template-columns:  0.1fr;
+    }
+    .Anna{
+        grid-column-start: 2;
+        grid-row-start:2;
+    }
+}
+//mainpage mediaquery flex.
+@media screen and (min-width:570px) //and (max-width: 812px)
+{
+    .container{
+        height: 85vh;
+        width:  85vh;
+        margin: 20px auto;
+    }
+}
+

@@ -1,0 +1,27 @@
+//404 message keyframes
+@keyframes typing{
+    from{width: 0}
+    to{width: 100%}
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+}
+//End 404 message keyframes
+//Button keyframes
+@keyframes onHoverOn{
+    from{
+        background-color: $secondary;
+    }
+    to{
+        background-color: transparent;
+    }
+}
+@keyframes onHoverOut{
+    from{
+        background-color: transparent;
+    }
+    to{
+        background-color: $secondary;
+    }
+}
