@@ -10,13 +10,14 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "method-override": "^3.0.0",
-    "postcss-cli": "^7.1.0"
+    "method-override": "^3.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.6",
     "nodemon": "^2.0.2",
+    "postcss-cli": "^7.1.1",
     "pug": "^2.0.4",
-    "reload": "^3.0.4"
+    "reload": "^3.0.4",
+    "sass": "^1.26.10"
   }
 }
